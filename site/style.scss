@@ -7,9 +7,54 @@
 .inline-block {
    display: inline-block;
 }
+main {
+  display: flex;
+}
 html {
   font-size: 30px;
   background-color:#005555;
   font-family: monospace;
 }
 
+nav {
+  height: 150px;
+  flex: 100%;
+  display: flex;
+  border-bottom: 2px solid black;
+}
+
+nav ul {
+  padding: 100;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+  flex: 1;
+}
+
+nav a, nav span {
+  display: inline-block;
+  font-size: 2rem;
+  height: 3rem;
+  line-height: 1.7;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+
+}
+
+a:link, a:visited, a:hover, a:active {
+background-color: whitesmoke;
+color: black;
+padding: 1px 5px;
+text-align: center;
+text-decoration: underline;
+display: inline-block;
+}
+footer {
+  margin-top: 10px;
+}
