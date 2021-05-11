@@ -4,13 +4,12 @@
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
     {% include meta.html %}
-
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name}} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
@@ -21,7 +20,8 @@
         <ul>
           <li><a href="/index/">Home</a></li>
           <li><a href="/projects/">Projects</a></li>
-          <li><a href="/about/">About</a></li>
+          <li><a 
+          href="/about/">About</a></li>
         </ul>
       </nav>
     </header>
@@ -29,6 +29,16 @@
     <main class="container">
       {{ content }}
     </main>
+
+    <footer>
+      <div class="container">
+        <h4>Contact Me!</h4>
+        <p><a href="mailto:thejeannettesrinivasan@gmail.com" target="_blank">thejeannettesrinivasan@gmail.com</a></p>
+        <h4>Social Media:</h4>
+        <p><a href="https://www.instagram.com/jeannettesrinivasan/?hl=en" target="_blank">Instagram: @JeannetteSrinivasan</a></p>
+        <p><a href="https://twitter.com/jeannettesrin?lang=en" target="_blank">Twitter: @JeannetteSrin</a></p>
+      </div>
+    </footer>
 
     {% include analytics.html %}
   </body>

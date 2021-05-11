@@ -3,24 +3,37 @@
 
 @import "reset";
 
-// Jeannette's styles here
-.inline-block {
-   display: inline-block;
+
+body {
+  background-color:#E5E2F3;
+  font-family: Verdana, sans-serif;
+  color:#870C25;
 }
-main {
-  display: flex;
+video {
+  width: 100%;
+  height: 56.25%;
+  margin-top: 21.875%;
 }
-html {
-  font-size: 30px;
-  background-color:#005555;
-  font-family: monospace;
+
+h1, h2, h3 {
+
+  font-size: 2.5rem;
+}
+
+h4, h5 {
+  font-size: 1.5rem;
+  
+}
+
+.container {
+  margin: 0 1.25rem;
 }
 
 nav {
   height: 150px;
   flex: 100%;
   display: flex;
-  border-bottom: 2px solid black;
+  border-bottom: 2px black;
 }
 
 nav ul {
@@ -43,18 +56,42 @@ nav a, nav span {
   line-height: 1.7;
   text-transform: uppercase;
   text-decoration: none;
-  color: black;
 
 }
 
-a:link, a:visited, a:hover, a:active {
-background-color: whitesmoke;
-color: black;
-padding: 1px 5px;
-text-align: center;
-text-decoration: underline;
-display: inline-block;
+a:link, a:visited,a:hover, a:active {
+ color:black;
+ padding: 1px 5px;
+ text-align: center;
+ text-decoration: underline;
+ display: inline-block;
 }
+
 footer {
-  margin-top: 10px;
+ margin: 2rem 0;
+
+  h4 {
+    margin: 1em 0 .5em;
+  }
+
+  p { margin: .5em 0}
+}
+
+.project p {
+  text-align:center;
+  margin-top: .5em;
+}
+
+img { width: 100% }
+
+.projects {
+  display: grid;
+  grid-gap: 2rem;
+  margin-top: 2rem;
+}
+.about {
+  display: grid;
+  grid-gap: 2rem;
+  margin-top: 2rem;
+  text-align:center;
 }

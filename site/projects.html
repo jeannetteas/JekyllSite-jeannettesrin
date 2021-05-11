@@ -1,48 +1,30 @@
 ---
-layout: page
+layout: default
 title: PROJECTS
 permalink: /projects/
+projects:
+- title: Manufactured
+  src: /images/project1.png
+  alt: Jeannette Srinivasan Red lights
+  artist: Avalon Greenburg-Call
+  year: 2020
+- title: Martha Graham's Lemon of Life
+  src: /images/Picture.jpg
+  alt: Jeannette on the grass
+  artist: Jeannette Srinivasan
+  year: 2021
+- title: Preparations for the Queen
+  src: /images/prepforqueen.png
+  alt: Jeannette Srinivasan in the Short Film Preparations for the Queen
+  artist: Avalon Greenburg-Call
+  year: 2021
 ---
-
-<!-- Jeannette's Projects page here -->
-<!DOCTYPE html>
-<html>
-   <head>
-      <title>HTML Backgorund Color</title>
-   </head>
-   <body style="background-color:#d5d170;">
-
-   </body>
-
-<p style="text-align:center;"><img src="Images/project1.png" alt="Jeannette Srinivasan with Red lights" width="500" height="300" ></p>
-<p style="text-align:center;color:#4b6a88;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.</p>
- 
-
-</style>
-
-</head>
-
-<body>
-   <div id="banner" style="overflow: hidden; display: inline-block;">
-
-        <div class="image" style="max-width: 20; max-height: 20%;">
-            <img src ="Images/Picture.jpg" alt="Jeannette on the grass" width="600" height="300" style="float:right;"><br>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.</p>
-        </div>
-
-        <div class="image" style="max-width: 95%; max-height: 95%;">
-            <img src ="Images/prepforqueen.png" alt="Jeannette Srinivasan in the Short Film Preparations for the Queen" width="600" height="300">
-            <p style="text-align:right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec viverra nec nulla vitae mollis.</p>
-        </div>
-    </div>
-
-
-    </body>
-</html>
-<footer>
-<p style="color:#4b6a88; font-weight: bold;">Contact Me!</p>
-  <a style="color:#4b6a88;" href="mailto:thejeannettesrinivasan@gmail.com">thejeannettesrinivasan@gmail.com</a></p><br>
-  <p style="color:#4b6a88; font-weight: bold;">Social Media:</p>
-  <a style="color:#4b6a88;" href="https://www.instagram.com/jeannettesrinivasan/?hl=en">Instagram: @JeannetteSrinivasan</a><br>
-  <a style="color:#4b6a88;" href="https://twitter.com/jeannettesrin?lang=en">Twitter: @JeannetteSrin</a>
-</footer>
+<h1>{{page.title}}</h1>
+<section class="projects">
+{% for project in page.projects %}
+  <div class="project">
+    <img src="{{project.src}}" alt="{{project.alt}}">
+    <p>"{{project.title}}" by {{project.artist}} {{project.year}}</p>
+  </div>
+{% endfor %}
+</section>
