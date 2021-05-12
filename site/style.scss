@@ -84,30 +84,90 @@ footer {
  margin: 3rem 0;
  border-top: 2px solid #870C25;
  padding-top: 1rem;
-
-  h4 {
-    margin: 1em 0 .5em;
-  }
 }
 
 .project p {
-  text-align:center;
-  margin-top: .5em;
+  text-align: center;
 }
 
-img { width: 100% }
+img { max-width: 100% }
 
-.projects {
-  display: grid;
-  grid-gap: 2rem;
-  margin-top: 2rem;
-}
-
-.about, .home {
+.home, .projects, .about {
   display: grid;
   grid-gap: 2rem;
 }
 
-p {
-  margin: 1em 0;
+// Tablet
+
+@media screen and (min-width: 600px) {
+  body {font-size: 1.25rem}
+
+  .container {
+    margin: 0 3rem;
+  }
+
+  .home, .projects, .about {
+    grid-gap: 3rem;
+  }
+
+  nav { margin-bottom: 3rem; }
+
+  .portrait {
+    height: 40vh;
+    overflow: hidden;
+
+    img {
+      position: relative;
+      top: -28%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav {margin-bottom: 6rem;}
+
+  footer {margin-top: 6rem;}
+
+  .container {
+    margin: 0 auto;
+    width: 75vw;
+    max-width: 1280px;
+  }
+
+  .home {
+    grid-template-areas: "portrait video" "portrait article";
+
+    .portrait { 
+      height: auto;
+      grid-area: portrait;
+      
+      img {position: static}
+    }
+
+    video {
+      grid-area: video;
+    }
+  }
+
+  footer .container, .projects {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  
+  .project:last-child:nth-child(odd) {
+    transform: translateX(50%);
+  }
+  
+  .about {
+    grid-template-areas: "portrait article" "portrait image";
+
+    .portrait {
+      height: auto;
+      grid-area: portrait;
+    }
+
+    img:not(.portrait) {
+      grid-area: image;
+    }
+  }
 }

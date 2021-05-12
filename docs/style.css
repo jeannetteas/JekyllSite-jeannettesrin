@@ -1,0 +1,237 @@
+/***************/
+/* MEYER RESET */
+/***************/
+@import url("https://fonts.googleapis.com/css2?family=BioRhyme&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+/*16px*/
+body {
+  background: #E5E2F3;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  line-height: 1.3;
+  color: #870C25;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: 'BioRhyme', serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.052rem;
+}
+
+@media screen and (max-width: 599px) {
+  h1 {
+    font-size: 2.441rem;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  p {
+    font-size: .85rem;
+  }
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+small, .text_small {
+  font-size: 0.8rem;
+}
+
+video {
+  width: 100%;
+}
+
+.container {
+  margin: 0 1.25rem;
+}
+
+nav {
+  border-bottom: 2px solid black;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav li {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: black;
+  text-decoration: underline;
+}
+
+footer {
+  margin: 3rem 0;
+  border-top: 2px solid #870C25;
+  padding-top: 1rem;
+}
+
+.project p {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.home, .projects, .about {
+  display: grid;
+  grid-gap: 2rem;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size: 1.25rem;
+  }
+  .container {
+    margin: 0 3rem;
+  }
+  .home, .projects, .about {
+    grid-gap: 3rem;
+  }
+  nav {
+    margin-bottom: 3rem;
+  }
+  .portrait {
+    height: 40vh;
+    overflow: hidden;
+  }
+  .portrait img {
+    position: relative;
+    top: -28%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  nav {
+    margin-bottom: 6rem;
+  }
+  footer {
+    margin-top: 6rem;
+  }
+  .container {
+    margin: 0 auto;
+    width: 75vw;
+    max-width: 1280px;
+  }
+  .home {
+    grid-template-areas: "portrait video" "portrait article";
+  }
+  .home .portrait {
+    height: auto;
+    grid-area: portrait;
+  }
+  .home .portrait img {
+    position: static;
+  }
+  .home video {
+    grid-area: video;
+  }
+  footer .container, .projects {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .project:last-child:nth-child(odd) {
+    transform: translateX(50%);
+  }
+  .about {
+    grid-template-areas: "portrait article" "portrait image";
+  }
+  .about .portrait {
+    height: auto;
+    grid-area: portrait;
+  }
+  .about img:not(.portrait) {
+    grid-area: image;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
