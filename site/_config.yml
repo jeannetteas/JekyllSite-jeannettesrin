@@ -1,15 +1,14 @@
 #
 # This file contains configuration flags to customize your site
 #
-
-# Name of your site (displayed in the header)
+#Name of your site (displayed in the header)
 name: Jeannette Srinivasan
 
-# Short bio or description (displayed in the header)
+#Short bio or description (displayed in the header)
 description: Actor-Singer-Artist
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: 
+
 
 #
 # Flags below are optional
